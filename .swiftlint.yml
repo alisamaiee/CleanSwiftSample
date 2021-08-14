@@ -1,0 +1,33 @@
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  - colon
+  - comma
+  - control_statement
+  - line_length
+  - file_length
+  - type_body_length
+  - type_name
+  - trailing_whitespace
+  - nesting
+  - identifier_name
+  - for_where
+  - empty_enum_arguments
+  - syntactic_sugar
+  - implicit_getter
+  - todo
+opt_in_rules: # some rules are turned off by default, so you need to opt-in
+  - empty_count # Find all the available rules by running: `swiftlint rules`
+  
+cyclomatic_complexity: 12
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Source/ExcludedFolder
+  - Source/ExcludedFile.swift
+  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+  - explicit_self
+
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
